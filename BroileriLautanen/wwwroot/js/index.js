@@ -21,9 +21,32 @@ var router = new VueRouter({
 
 // Initialize our SPA.
 var ExampleApp = new Vue({
+    self: this,
     el: '#ExampleApp',
     data: {
-        header: 'Sane Software'
+        header: 'Sane Software',
+        exampleGetResult: {
+            name: "Test",
+            age: 69
+        }
+    },
+    computed: {
+        fullExample: function () {
+            return this.exampleGetResult.name + " " + this.exampleGetResult.age;
+        }
+    },
+    methods: {
+        getExampleModel: function (event) {
+            var self = this;
+            $.ajax({
+                url: "/api/example",
+                method: "GET",
+            }).done(function (result) {
+                // this result is coming from local api
+                self.exampleGetResult.name = result.name;
+                self.exampleGetResult.age = result.age;
+            });
+        }
     },
     created: function () {
         console.log("Vue instance has been created");

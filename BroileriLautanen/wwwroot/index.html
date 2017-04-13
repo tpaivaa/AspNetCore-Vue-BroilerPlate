@@ -6,7 +6,7 @@
     <script src="lib/materialize/dist/js/materialize.min.js" type="text/javascript"></script>
     <link href="lib/materialize/dist/css/materialize.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="lib/_app/main-68b329da98.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
     <title>Sane Software</title>
 </head>
 <body>
@@ -14,9 +14,17 @@
         <h1>{{header}}</h1>
         <example-component example="Vue" example2="ASP.NET Core">
         </example-component>
-        <a class="btn-floating btn-large waves-effect waves-light red">
-            <i class="material-icons">add</i>
-        </a>
+        <div class="api-call-example">
+            <div class="button-container">
+                <span>GETTER TESTER</span>
+                <a v-on:click="getExampleModel" class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
+            <div class="result-test-get">
+                {{fullExample}}
+            </div>
+        </div>
         <div class="router-example">
             <router-link to="/foo/1">Go to Foo</router-link><br/>
             <router-link to="/bar/2">Go to Bar</router-link>
@@ -25,6 +33,6 @@
             </div>
         </div>
     </div>
-    <script src="lib/_app/main-36f36310dd.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
