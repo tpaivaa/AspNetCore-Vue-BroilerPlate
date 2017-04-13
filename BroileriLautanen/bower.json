@@ -1,0 +1,12 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "moment": "~2.18.1",
+    "jQuery": "~3.2.1",
+    "materialize": "~0.98.1",
+    "vue": "~2.2.6",
+    "vue-router": "~2.4.0"
+  }
+}
