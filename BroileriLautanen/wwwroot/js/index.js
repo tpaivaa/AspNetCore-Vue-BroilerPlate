@@ -14,12 +14,12 @@ var routes = [
     { path: '/bar/:id', component: Route2 }
 ];
 
-// Initialize router. (routes is a shorthand of routes:routes)
+// Initialize router.
 var router = new VueRouter({
-    routes
+    routes:routes
 });
 
-// Initialize our SPA. (router is a shorthand of router:router)
+// Initialize our SPA.
 var ExampleApp = new Vue({
     el: '#ExampleApp',
     data: {
@@ -28,7 +28,7 @@ var ExampleApp = new Vue({
     created: function () {
         console.log("Vue instance has been created");
     },
-    router
+    router:router
 });
 
 
