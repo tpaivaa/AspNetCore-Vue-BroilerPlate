@@ -1,4 +1,7 @@
 ﻿// Example of adding component to SPA. Now this can be used as <example-component></example-component>
+
+var dataservice = require("./dataservice.js");
+
 Vue.component('example-component', {
     props: ['example', 'example2'],
     template: '<h2> Boilerplate for {{example}} + {{example2}} </h2>'

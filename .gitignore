@@ -4,3 +4,5 @@ BroileriLautanen/obj/
 BroileriLautanen/bin/
 BroileriLautanen/node_modules/
 .vs/config/applicationhost.config
+.vs/slnx.sqlite
+*.log
