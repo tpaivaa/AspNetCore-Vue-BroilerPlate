@@ -46,11 +46,18 @@ namespace BroileriLautanen.Controllers.Api
         }
 
         [HttpPost("api/example")]
-        public JsonResult PostExampleModel([FromBody]ExampleModel model)
+        public IActionResult PostExampleModel([FromBody]ExampleModel model)
         {
-            _logger.LogInformation("Post " + model?.Name);
-            return Json(model);
+            if(model == null)
+            {
+                _logger.LogError("Invalid model");
+                return BadRequest();
+            }
+            else
+            {
+                _logger.LogInformation("Post " + model?.Name);
+                return Ok();
+            }
         }
-
     }
 }

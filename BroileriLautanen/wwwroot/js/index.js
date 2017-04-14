@@ -28,7 +28,8 @@ var ExampleApp = new Vue({
         exampleGetResult: {
             name: "Test",
             age: 69
-        }
+        },
+        postStatus: 'You have not posted anything'
     },
     computed: {
         fullExample: function () {
@@ -41,6 +42,13 @@ var ExampleApp = new Vue({
             dataservice.getObject("/api/example", function (result) {
                 self.exampleGetResult.name = result.name;
                 self.exampleGetResult.age = result.age;
+            });
+        },
+        postExampleModel: function (event) {
+            var self = this;
+            var payload = JSON.stringify(self.exampleGetResult);
+            dataservice.postObject("/api/example", payload, function (result) {
+                self.postStatus = result;
             });
         }
     },

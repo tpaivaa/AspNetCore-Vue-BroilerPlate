@@ -25,6 +25,17 @@
                 {{fullExample}}
             </div>
         </div>
+        <div class="api-post-example">
+            <div class="button-container">
+                <span>POSTER TESTER</span>
+                <a v-on:click="postExampleModel" class="btn-floating btn-large waves-effect waves-light blue">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
+            <div class="result-post-test">
+                {{postStatus}}
+            </div>
+        </div>
         <div class="router-example">
             <router-link to="/foo/1">Go to Foo</router-link><br/>
             <router-link to="/bar/2">Go to Bar</router-link>
@@ -32,6 +43,7 @@
                 <router-view></router-view>
             </div>
         </div>
+
     </div>
     <script src="js/dataservice.js"></script>
     <script src="js/index.js"></script>
