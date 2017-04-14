@@ -1,10 +1,12 @@
 # AspNetCore-Vue-BroilerPlate
 Template for future projects and good exercise for me.
 
-Requirements:
+# REQUIREMENTS
+
 Visual Studio 2017
 
-Installation:
+# INSTALLATION
+
 npm install -g bower
 
 bower install
