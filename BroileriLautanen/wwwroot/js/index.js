@@ -38,11 +38,7 @@ var ExampleApp = new Vue({
     methods: {
         getExampleModel: function (event) {
             var self = this;
-            $.ajax({
-                url: "/api/example",
-                method: "GET",
-            }).done(function (result) {
-                // this result is coming from local api
+            dataservice.getObject("/api/example", function (result) {
                 self.exampleGetResult.name = result.name;
                 self.exampleGetResult.age = result.age;
             });

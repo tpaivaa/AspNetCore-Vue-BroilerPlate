@@ -4,6 +4,7 @@ module.exports = {
         main: {
             scripts: [
                 'wwwroot/js/index.js',
+                'wwwroot/js/dataservice.js'
             ],
             styles: 'wwwroot/css/*.css'
         },

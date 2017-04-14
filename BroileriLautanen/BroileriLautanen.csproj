@@ -9,6 +9,7 @@
     <Content Include="wwwroot\css\index.min.css" />
     <Content Include="wwwroot\css\index.scss" />
     <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot\js\dataservice.js" />
     <Content Include="wwwroot\js\index.js" />
   </ItemGroup>
   <ItemGroup>
