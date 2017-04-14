@@ -24,6 +24,11 @@
             <div class="result-test-get">
                 {{fullExample}}
             </div>
+            <div class="result-test-get2">
+                <template v-for="item in itemListExample">
+                    <div>{{item.name}}: {{item.id}}</div>
+                </template>
+            </div>
         </div>
         <div class="api-post-example">
             <div class="button-container">
@@ -37,7 +42,7 @@
             </div>
         </div>
         <div class="router-example">
-            <router-link to="/foo/1">Go to Foo</router-link><br/>
+            <router-link to="/foo/1">Go to Foo</router-link><br />
             <router-link to="/bar/2">Go to Bar</router-link>
             <div class="router-view">
                 <router-view></router-view>

@@ -1,6 +1,6 @@
 ﻿// Example of adding component to SPA. Now this can be used as <example-component></example-component>
 Vue.component('example-component', {
-    props:['example', 'example2'],
+    props: ['example', 'example2'],
     template: '<h2> Boilerplate for {{example}} + {{example2}} </h2>'
 });
 
@@ -16,7 +16,7 @@ var routes = [
 
 // Initialize router.
 var router = new VueRouter({
-    routes:routes
+    routes: routes
 });
 
 // Initialize our SPA.
@@ -27,13 +27,17 @@ var ExampleApp = new Vue({
         header: 'Sane Software',
         exampleGetResult: {
             name: "Test",
-            age: 69
+            age: 69,
+            itemList: []
         },
         postStatus: 'You have not posted anything'
     },
     computed: {
         fullExample: function () {
             return this.exampleGetResult.name + " " + this.exampleGetResult.age;
+        },
+        itemListExample: function () {
+            return this.exampleGetResult.itemList;
         }
     },
     methods: {
@@ -42,6 +46,7 @@ var ExampleApp = new Vue({
             dataservice.getObject("/api/example", function (result) {
                 self.exampleGetResult.name = result.name;
                 self.exampleGetResult.age = result.age;
+                self.exampleGetResult.itemList = result.itemList;
             });
         },
         postExampleModel: function (event) {
@@ -55,7 +60,5 @@ var ExampleApp = new Vue({
     created: function () {
         console.log("Vue instance has been created");
     },
-    router:router
+    router: router
 });
-
-
