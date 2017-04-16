@@ -6,11 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\css\index.min.css" />
-    <Content Include="wwwroot\css\index.scss" />
+    <Compile Remove="wwwroot\img\**" />
+    <Content Remove="wwwroot\img\**" />
+    <EmbeddedResource Remove="wwwroot\img\**" />
+    <None Remove="wwwroot\img\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\App.vue" />
+    <Content Include="wwwroot\components\Home.vue" />
+    <Content Include="wwwroot\components\Navbar.vue" />
     <Content Include="wwwroot\index.html" />
-    <Content Include="wwwroot\js\dataservice.js" />
-    <Content Include="wwwroot\js\index.js" />
+    <Content Include="wwwroot\main.js" />
+    <Content Include="wwwroot\stylesheets\app.scss" />
+    <Content Include="wwwroot\stylesheets\variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -21,7 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\Web\" />
-    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\services\" />
   </ItemGroup>
 
 </Project>

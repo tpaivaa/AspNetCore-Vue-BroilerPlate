@@ -6,3 +6,4 @@ BroileriLautanen/node_modules/
 .vs/config/applicationhost.config
 .vs/slnx.sqlite
 *.log
+BroileriLautanen/wwwroot/build/

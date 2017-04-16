@@ -1,55 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <script src="lib/_app/vendor-47e988a709.js"></script>
-    <script src="lib/materialize/dist/js/materialize.min.js" type="text/javascript"></script>
-    <link href="lib/materialize/dist/css/materialize.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet" />
+  <head>
+    <meta charset="utf-8">
     <title>Sane Software</title>
-</head>
-<body>
-    <div id="ExampleApp" class="container">
-        <h1>{{header}}</h1>
-        <example-component example="Vue" example2="ASP.NET Core">
-        </example-component>
-        <div class="api-call-example">
-            <div class="button-container">
-                <span>GETTER TESTER</span>
-                <a v-on:click="getExampleModel" class="btn-floating btn-large waves-effect waves-light red">
-                    <i class="material-icons">add</i>
-                </a>
-            </div>
-            <div class="result-test-get">
-                {{fullExample}}
-            </div>
-            <div class="result-test-get2">
-                <template v-for="item in itemListExample">
-                    <div>{{item.name}}: {{item.id}}</div>
-                </template>
-            </div>
-        </div>
-        <div class="api-post-example">
-            <div class="button-container">
-                <span>POSTER TESTER</span>
-                <a v-on:click="postExampleModel" class="btn-floating btn-large waves-effect waves-light blue">
-                    <i class="material-icons">add</i>
-                </a>
-            </div>
-            <div class="result-post-test">
-                {{postStatus}}
-            </div>
-        </div>
-        <div class="router-example">
-            <router-link to="/foo/1">Go to Foo</router-link><br />
-            <router-link to="/bar/2">Go to Bar</router-link>
-            <div class="router-view">
-                <router-view></router-view>
-            </div>
-        </div>
-
-    </div>
-    <script src="lib/_app/bundle.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="dist/app.js"></script>
+  </body>
 </html>
