@@ -15,7 +15,6 @@
   <ItemGroup>
     <Content Include="wwwroot\App.vue" />
     <Content Include="wwwroot\components\ApiExample.vue" />
-    <Content Include="wwwroot\components\Footer.vue" />
     <Content Include="wwwroot\components\FooterBar.vue" />
     <Content Include="wwwroot\components\Home.vue" />
     <Content Include="wwwroot\components\Navbar.vue" />
