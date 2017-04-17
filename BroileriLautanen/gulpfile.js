@@ -5,8 +5,8 @@ var elixir = require('laravel-elixir');
 elixir.assetsPath = '/wwwroot/';
 // Run webpack and let it does its magic.
 gulp.task('webpack', function(){
-  return gulp.src('wwwroot/main.js')
-    .pipe(webpack( require('./webpack.config.js') ))
+    return gulp.src('wwwroot/main.js')
+        .pipe(webpack(require('./webpack.config.js'))).on('error', swallowError)
     .pipe(gulp.dest('wwwroot/dist/'))
 });
 // Configure watch to track changes on VUE files.
@@ -15,3 +15,9 @@ gulp.task('watch', function () {
         ['wwwroot/components/*.vue', 'wwwroot/services/**/*.js', 'wwwroot/*.vue', 'wwwroot/*.js', 'wwwroot/stylesheets/*.scss'],
         ['webpack']);
 });
+
+
+function swallowError(error) {
+    console.log(error.toString());
+    this.emit('end');
+}

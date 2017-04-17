@@ -3,30 +3,48 @@
   export default {
     data: function () {
       return {
-        result: ""
+          result: "",
+          postResult: ""
       }
     },
     mounted: function () {
         ExampleService.getExample(this).then(resp => {
             // Success
+            console.log("GET");
             console.log(resp.status);
             console.log(resp.statusText);
             this.result = resp.data;
         }, function (response) {
             // Error
             console.log(response.statusText);
-      });
+            });
+        ExampleService.postExample(this).then(resp => {
+            // Success
+            console.log("POST");
+            console.log(resp.status);
+            console.log(resp.statusText);
+            this.postResult = resp.statusText;
+        }, function (response) {
+            // Error
+            console.log(response.statusText);
+        });
     }
   }
 </script>
 
 <template>
     <div class="container">
-        <div>
-            <div>
-                <h2>Result from ASP.NET Core Api</h2>
+        <div class="row">
+            <div class="col s6">
+                <h2>HTTP GET Result:</h2>
                 <p>
                     {{result}}
+                </p>
+            </div>
+            <div class="col s6">
+                <h2>HTTP POST Result:</h2>
+                <p>
+                    {{postResult}}
                 </p>
             </div>
         </div>
