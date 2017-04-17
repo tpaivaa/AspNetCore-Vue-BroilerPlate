@@ -12,6 +12,6 @@ gulp.task('webpack', function(){
 // Configure watch to track changes on VUE files.
 gulp.task('watch', function () {
     gulp.watch(
-        ['wwwroot/components/*.vue', 'wwwroot/services/**/*.js', 'wwwroot/*.vue', 'wwwroot/*.js'],
+        ['wwwroot/components/*.vue', 'wwwroot/services/**/*.js', 'wwwroot/*.vue', 'wwwroot/*.js', 'wwwroot/stylesheets/*.scss'],
         ['webpack']);
 });

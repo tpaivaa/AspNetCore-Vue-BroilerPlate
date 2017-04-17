@@ -4,7 +4,7 @@
     }
 </script>
 <template>
-    <div>
+    <div class="santeri-example">
         <div>
             <div>
                 <ul>
@@ -17,3 +17,12 @@
         </div>
     </div>
 </template>
+<style lang="sass">
+    /* Imports */
+    @import "../stylesheets/variables.scss";
+    /* Styles */
+    .santeri-example{
+        font-size:2em;
+        color:$black;
+    }
+</style>
