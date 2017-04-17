@@ -8,10 +8,13 @@
     },
     mounted: function () {
         ExampleService.getExample(this).then(resp => {
-            console.log(resp);
+            // Success
+            console.log(resp.status);
+            console.log(resp.statusText);
             this.result = resp.data;
-      }, function (response) {
-        console.log(response)
+        }, function (response) {
+            // Error
+            console.log(response.statusText);
       });
     }
   }

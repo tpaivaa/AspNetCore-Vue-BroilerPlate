@@ -2,7 +2,7 @@
   import Navbar from './components/Navbar.vue'
 
   export default {
-    name: "Boilerplate3",
+    name: "Boilerplate",
     components: {
       Navbar
     }

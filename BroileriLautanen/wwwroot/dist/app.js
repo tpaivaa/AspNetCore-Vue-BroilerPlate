@@ -14008,7 +14008,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	  name: "Boilerplate3",
+	  name: "Boilerplate",
 	  components: {
 	    Navbar: _Navbar2.default
 	  }
@@ -14588,10 +14588,13 @@
 	    var _this = this;
 
 	    _exampleservice2.default.getExample(this).then(function (resp) {
-	      console.log(resp);
+	      // Success
+	      console.log(resp.status);
+	      console.log(resp.statusText);
 	      _this.result = resp.data;
 	    }, function (response) {
-	      console.log(response);
+	      // Error
+	      console.log(response.statusText);
 	    });
 	  }
 	};
@@ -14606,6 +14609,7 @@
 	    value: true
 	});
 	exports.default = {
+	    // Ctx is the Vue instance passed as a parameter.
 	    getExample: function getExample(ctx) {
 	        console.log(ctx);
 	        var result = ctx.$http.get('/api/example');
