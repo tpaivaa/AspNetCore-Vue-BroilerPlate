@@ -1,4 +1,4 @@
-/// <binding ProjectOpened='watch' />
+/// <binding AfterBuild='webpack' ProjectOpened='watch' />
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var elixir = require('laravel-elixir');
