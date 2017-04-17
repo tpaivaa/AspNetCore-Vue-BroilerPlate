@@ -1,17 +1,23 @@
 <script>
-  import Navbar from './components/Navbar.vue'
-
-  export default {
+    import Navbar from './components/Navbar.vue';
+    import FooterBar from './components/FooterBar.vue';
+    export default {
     name: "Boilerplate",
-    components: {
-      Navbar
+        components: {
+            Navbar,
+            FooterBar
+        }
     }
-  }
 </script>
-
 <template>
-  <div>
-    <navbar></navbar>
-    <router-view></router-view>
-  </div>
+    <div>
+        <Navbar></Navbar>
+        <main>
+          <router-view></router-view>
+        </main>
+        <FooterBar></FooterBar>
+    </div>
 </template>
+<style lang="sass">
+
+</style>

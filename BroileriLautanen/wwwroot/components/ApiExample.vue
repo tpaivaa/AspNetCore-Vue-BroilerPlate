@@ -21,7 +21,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <div>
             <div>
                 <h2>Result from ASP.NET Core Api</h2>

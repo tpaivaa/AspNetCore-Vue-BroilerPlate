@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <div>
       <div>
         <h2>Lulz</h2>
