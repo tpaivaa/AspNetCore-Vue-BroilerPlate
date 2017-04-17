@@ -1,4 +1,5 @@
 ﻿// bundle.config.js 
+// Is not used at this point. This is for bundling scripts with gulp-bundle.
 module.exports = {
     bundle: {
         main: {
