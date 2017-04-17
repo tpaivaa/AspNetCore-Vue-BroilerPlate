@@ -1,9 +1,4 @@
-﻿<script>
-  export default {
-    name: "FooterBar"
-    }
-</script>
-<template>
+﻿<template>
     <footer class="page-footer light-blue darken-3">
         <div class="container">
             <div class="row">
@@ -20,7 +15,12 @@
         </div>
     </footer>
 </template>
-<style lang="sass">
+<script>
+  export default {
+    name: "FooterBar"
+    }
+</script>
+<style lang="sass" scoped>
     /* Imports */
     @import "../stylesheets/variables.scss";
     /* Styles */

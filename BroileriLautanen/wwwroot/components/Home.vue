@@ -1,7 +1,4 @@
-<script>
-  export default {
-    }
-</script>
+
 <template>
     <div id="home-container">
         <div class="container">
@@ -55,7 +52,11 @@
         </div>
     </div>
 </template>
-<style lang="sass">
+<script>
+  export default {
+    }
+</script>
+<style lang="sass" scoped>
     #home-banner {
         background-image: url("https://i.ytimg.com/vi/IwxkVL5DGg8/maxresdefault.jpg");
         background-size: contain;

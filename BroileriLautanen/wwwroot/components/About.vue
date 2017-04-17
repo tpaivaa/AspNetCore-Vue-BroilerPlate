@@ -1,8 +1,3 @@
-<script>
-    export default {
-    }
-</script>
-
 <template>
     <div class="container">
         <div class="about-header light-blue-text text-darken-3">
@@ -33,7 +28,11 @@
         </div>
     </div>
 </template>
-<style lang="sass">
+<script>
+    export default {
+    }
+</script>
+<style lang="sass" scoped>
     @import "../stylesheets/variables.scss";
     .purpose-box{
         font-size:1.2em;

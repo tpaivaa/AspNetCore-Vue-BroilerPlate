@@ -1,8 +1,3 @@
-<script>
-  export default {
-    name: "Navbar"
-    }
-</script>
 <template>
     <nav>
         <div class="nav-wrapper light-blue darken-2">
@@ -15,7 +10,12 @@
         </div>
     </nav>
 </template>
-<style lang="sass">
+<script>
+  export default {
+    name: "Navbar"
+    }
+</script>
+<style lang="sass" scoped>
     /* Imports */
     @import "../stylesheets/variables.scss";
     /* Styles */

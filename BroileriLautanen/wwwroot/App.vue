@@ -1,3 +1,12 @@
+<template>
+    <div>
+        <Navbar></Navbar>
+        <main>
+          <router-view></router-view>
+        </main>
+        <FooterBar></FooterBar>
+    </div>
+</template>
 <script>
     import Navbar from './components/Navbar.vue';
     import FooterBar from './components/FooterBar.vue';
@@ -9,15 +18,6 @@
         }
     }
 </script>
-<template>
-    <div>
-        <Navbar></Navbar>
-        <main>
-          <router-view></router-view>
-        </main>
-        <FooterBar></FooterBar>
-    </div>
-</template>
-<style lang="sass">
+<style lang="sass" scoped>
 
 </style>
