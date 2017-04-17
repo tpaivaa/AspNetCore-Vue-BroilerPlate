@@ -7,3 +7,4 @@ BroileriLautanen/node_modules/
 .vs/slnx.sqlite
 *.log
 BroileriLautanen/wwwroot/build/
+BroileriLautanen/wwwroot/dist/
