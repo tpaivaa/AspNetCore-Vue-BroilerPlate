@@ -7,6 +7,7 @@ import Router from 'vue-router'
 import App from './App.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import ApiExample from './components/ApiExample.vue'
 
 // Install plugins
 Vue.use(Router)
@@ -23,6 +24,11 @@ let routes = [
     path: '/about',
     name: 'about',
     component: About
+  },
+  {
+      path: '/apiexample',
+      name: 'apiexample',
+      component: ApiExample
   },
   { path: '*', redirect: '/home' }
 ]
