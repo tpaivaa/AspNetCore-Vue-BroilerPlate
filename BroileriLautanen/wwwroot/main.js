@@ -8,6 +8,7 @@ import App from './App.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import ApiExample from './components/ApiExample.vue'
+import Inputs from './components/Inputs.vue'
 
 // Install plugins
 Vue.use(Router)
@@ -29,6 +30,11 @@ let routes = [
       path: '/apiexample',
       name: 'apiexample',
       component: ApiExample
+  },
+  {
+      path: '/inputs',
+      name: 'inputs',
+      component: Inputs
   },
   { path: '*', redirect: '/home' }
 ]

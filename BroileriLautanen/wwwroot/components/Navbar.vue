@@ -6,6 +6,7 @@
                 <li><router-link to="home">Home</router-link></li>
                 <li><router-link to="about">About</router-link></li>
                 <li><router-link to="apiexample">ApiExample</router-link></li>
+                <li><router-link to="inputs">Functionality</router-link></li>
             </ul>
         </div>
     </nav>
